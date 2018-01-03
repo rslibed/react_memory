@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Card extends Component {
-    constructor (props) {
-        super(props);
-        this.deckData = new Array(3).fill(false);
-    }
-    render() {
-        const createDeck = this.deckData.map( (item, index) => {
-            return <div key={index} className="card">Here is the card component.</div>;
-        });
-        return (
-            <div>{ createDeck }</div>
-        );
-    }
+export default props => {
+    const { flip, card: { front, back, flipped } } = props;
+    return (
+         <div className="card">
+            <div className="front">
+                <img src={front}/>
+            </div>
+            <div onClick={flip} className={`back ${flipped ? 'flipped' : ''}`}>
+                <img src={back}/>
+            </div>
+        </div>
+    );
 }
-
-export default Card;
