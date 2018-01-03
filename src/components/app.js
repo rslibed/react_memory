@@ -1,10 +1,10 @@
 import React from 'react';
-import '../assets/css/app.css';
-import logo from '../assets/images/logo.svg';
+import './style.css';
+import GameBoard from './gameboard';
 
 const App = () => (
     <div className="app">
-        <h1>Memory Match</h1>
+        <GameBoard/>
     </div>
 );
 

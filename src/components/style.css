@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+}
+#root,
+.app {
+    width: 100%;
+    height: 100%;
+}
+.gameboard {
+    background-color: #000;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+.card {
+    width: 16.6%;
+    height: 33.33%;
+    background-color: blue;
+    display: inline-block;
+}
