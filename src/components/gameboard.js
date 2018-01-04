@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import cardData from '../assets/helpers/card_data';
+import { doubleArray } from '../assets/helpers';
 import Card from './card';
 
 class GameBoard extends Component {
@@ -8,13 +9,18 @@ class GameBoard extends Component {
         this.flipCard = this.flipCard.bind(this);
         this.state = {
             firstCardIndex: null,
-            deck: cardData,
+            deck: [],
             matches: 0,
             attempts: 0,
             gameState: 'ready'
         };
         this.blockClick = false;
         console.log(cardData);
+    }
+    componentDidMount () {
+        this.setState({
+            deck: doubleArray(cardData)
+        });
     }
     handleCardClicked (index) {
         if (this.blockClick) return;
