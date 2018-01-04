@@ -20,13 +20,10 @@ body {
     width: 85vw;
 }
 .card {
-    width: 16.6%;
-    height: 33.33%;
-    display: inline-block;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s ease-in-out;
 }
 .front,
 .back {
@@ -53,8 +50,17 @@ body {
     height: 100%;
 }
 .flipped {
-    display: none;
+    transform: rotateY(180deg);
 }
 .game {
     text-align: center;
+}
+.card-container {
+    display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 5px;
+    width: 100%;
+    height: 33.33%;
 }

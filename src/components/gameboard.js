@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import cardData from '../assets/helpers/card_data';
-import { doubleArray } from '../assets/helpers';
+import { doubleArray, shuffleArray } from '../assets/helpers';
 import Card from './card';
 
 class GameBoard extends Component {
@@ -19,7 +19,7 @@ class GameBoard extends Component {
     }
     componentDidMount () {
         this.setState({
-            deck: doubleArray(cardData)
+            deck: shuffleArray(doubleArray(cardData))
         });
     }
     handleCardClicked (index) {
