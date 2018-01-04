@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 body {
     width: 100vw;
@@ -13,15 +14,16 @@ body {
     height: 100%;
 }
 .gameboard {
-    width: 100%;
-    height: 100%;
+    height: 40vw;
+    display: flex;
+    margin: auto;
+    width: 85vw;
 }
 .card {
     width: 16.6%;
     height: 33.33%;
     display: inline-block;
-    margin: 2vmin;
-    padding: 2vmin 1vmin;
+    margin: auto;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -52,4 +54,7 @@ body {
 }
 .flipped {
     display: none;
+}
+.game {
+    text-align: center;
 }
