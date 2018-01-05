@@ -89,5 +89,4 @@ class GameBoard extends Component {
         )
 }
 }
-
 export default GameBoard;

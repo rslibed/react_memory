@@ -4,11 +4,11 @@ export default props => {
     const { flip, card: { front, back, flipped } } = props;
     return (
         <div className="card-container">
-            <div className="card">
+            <div className='card' className={`back ${flipped ? 'flipped' : ''}`}>
                 <div className="front">
                     <img src={front}/>
                 </div>
-                <div onClick={flip} className={`back ${flipped ? 'flipped' : ''}`}>
+                <div onClick={flip}>
                     <img src={back}/>
                 </div>
             </div>
